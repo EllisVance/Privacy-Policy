@@ -3,48 +3,81 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tab Oscillating Blocker</title>
+    <title>Privacy Policy - Tab Oscillating Blocker</title>
     <meta
       name="description"
-      content="Tab Oscillating Blocker is a local-first Chrome extension that reduces rapid tab switching with a calm breathing reset."
+      content="Privacy Policy for Tab Oscillating Blocker, a local-first Chrome extension for reducing rapid tab switching."
     >
     <style>
       :root {
-        color-scheme: dark;
-        --bg: #101314;
-        --text: #edf7f2;
+        color-scheme: light dark;
+        --bg: #0f1111;
+        --panel: #171b1c;
+        --text: #eef7f2;
         --muted: #9badad;
+        --line: rgba(255, 255, 255, 0.12);
         --accent: #86efac;
       }
 
+      * {
+        box-sizing: border-box;
+      }
+
       body {
-        display: grid;
-        min-height: 100vh;
         margin: 0;
-        place-items: center;
-        background: radial-gradient(circle at 50% 35%, rgba(134, 239, 172, 0.16), transparent 34rem), var(--bg);
+        background: var(--bg);
         color: var(--text);
-        font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
 
       main {
-        width: min(720px, calc(100% - 32px));
+        width: min(860px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0 72px;
       }
 
-      h1 {
-        margin: 0 0 14px;
-        font-size: clamp(38px, 8vw, 76px);
-        line-height: 1.02;
+      article {
+        padding: clamp(22px, 4vw, 42px);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--panel);
+      }
+
+      h1,
+      h2 {
+        line-height: 1.16;
         letter-spacing: 0;
       }
 
-      p {
-        max-width: 46em;
-        margin: 0 0 24px;
+      h1 {
+        margin: 0 0 8px;
+        font-size: clamp(32px, 6vw, 54px);
+      }
+
+      h2 {
+        margin: 34px 0 10px;
+        font-size: 21px;
+      }
+
+      p,
+      li {
         color: var(--muted);
       }
 
+      p {
+        margin: 0 0 14px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 22px;
+      }
+
       a {
+        color: var(--accent);
+      }
+
+      .updated {
         color: var(--accent);
         font-weight: 700;
       }
@@ -52,12 +85,80 @@
   </head>
   <body>
     <main>
-      <h1>Tab Oscillating Blocker</h1>
-      <p>
-        A local-first Chrome extension that detects rapid tab switching and opens
-        a calm breathing reset before attention fragments.
-      </p>
-      <a href="./privacy-policy.html">Privacy Policy</a>
+      <article>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Effective date: May 17, 2026</p>
+
+        <p>
+          This Privacy Policy explains how Tab Oscillating Blocker handles information.
+          Tab Oscillating Blocker is a Chrome extension that detects rapid tab switching
+          and opens a short local breathing reset to help reduce attention fragmentation.
+        </p>
+
+        <h2>Data Collection</h2>
+        <p>
+          Tab Oscillating Blocker does not collect, transmit, sell, or share personal
+          information. The extension does not require an account and does not use a
+          remote server.
+        </p>
+
+        <h2>Local Data Stored on Your Device</h2>
+        <p>
+          The extension stores the following information locally in Chrome extension
+          storage:
+        </p>
+        <ul>
+          <li>Whether the extension is enabled or disabled.</li>
+          <li>Your configured tab-switch threshold and time window.</li>
+          <li>Your configured breathing reset duration.</li>
+          <li>Your ignored-site list.</li>
+          <li>Your optional work schedule settings.</li>
+          <li>Local reset statistics, such as today's reset count and recent trend data.</li>
+          <li>Temporary cooldown and breathing reset state.</li>
+        </ul>
+        <p>
+          This information remains on your device and is used only to provide the
+          extension's core functionality.
+        </p>
+
+        <h2>Browser Tab Information</h2>
+        <p>
+          Tab Oscillating Blocker uses Chrome tab activation events to detect rapid
+          switching between tabs. The extension may temporarily read the active tab URL
+          to redirect that tab to the local breathing reset page and to support the
+          ignored-site feature. Tab URLs are not transmitted to any external service.
+        </p>
+
+        <h2>Third-Party Sharing</h2>
+        <p>
+          Tab Oscillating Blocker does not share user data with third parties.
+        </p>
+
+        <h2>Remote Code and Analytics</h2>
+        <p>
+          The extension does not use remote code, advertising SDKs, analytics services,
+          tracking pixels, or external telemetry.
+        </p>
+
+        <h2>Chrome Web Store User Data Policy</h2>
+        <p>
+          The use of information received from Chrome APIs will adhere to the Chrome
+          Web Store User Data Policy, including the Limited Use requirements.
+        </p>
+
+        <h2>Changes to This Policy</h2>
+        <p>
+          This policy may be updated if the extension's functionality or data handling
+          changes. The effective date at the top of this page will be updated when
+          changes are made.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          For privacy questions, contact the developer through the Chrome Web Store
+          developer profile or the support contact listed on the extension's store page.
+        </p>
+      </article>
     </main>
   </body>
 </html>

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy Policy - Review Analytics Shadow Decoder</title>
+    <meta name="description" content="Privacy Policy for Review Analytics Shadow Decoder, a local-first Chrome extension for review keyword and pain-point analysis.">
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #fafafa;
+        --panel: #ffffff;
+        --text: #171717;
+        --muted: #525252;
+        --border: #e5e5e5;
+        --purple: #7c3aed;
+        --green: #047857;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+
+      main {
+        width: min(880px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0 72px;
+      }
+
+      article {
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: var(--panel);
+        padding: clamp(24px, 5vw, 48px);
+        box-shadow: 0 18px 48px rgba(15, 23, 42, 0.06);
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        background: #f1ecff;
+        color: var(--purple);
+        padding: 6px 12px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 18px 0 8px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin: 34px 0 10px;
+        font-size: 22px;
+        line-height: 1.25;
+        letter-spacing: 0;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      strong {
+        color: var(--text);
+      }
+
+      ul {
+        padding-left: 22px;
+      }
+
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        gap: 12px;
+        margin: 28px 0;
+      }
+
+      .summary div {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        background: #fcfcfc;
+        padding: 16px;
+      }
+
+      .summary span {
+        display: block;
+        color: var(--green);
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      code {
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        background: #f5f5f5;
+        color: var(--text);
+        padding: 2px 5px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 0.92em;
+      }
+
+      footer {
+        margin-top: 40px;
+        border-top: 1px solid var(--border);
+        padding-top: 22px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <span class="eyebrow">Privacy Policy</span>
+        <h1>Review Analytics Shadow Decoder</h1>
+        <p><strong>Effective date:</strong> May 19, 2026</p>
+        <p>
+          Review Analytics Shadow Decoder is a local-first Chrome extension that helps users analyze visible review and comment text from supported websites. The extension is designed to keep analysis inside the user's browser.
+        </p>
+
+        <section class="summary" aria-label="Privacy summary">
+          <div>
+            <span>No server upload</span>
+            <p>Review text is processed locally in browser memory.</p>
+          </div>
+          <div>
+            <span>No external APIs</span>
+            <p>The extension does not call remote AI, analytics, or processing services.</p>
+          </div>
+          <div>
+            <span>No data sale</span>
+            <p>User data is not sold, shared, transferred, or used for advertising.</p>
+          </div>
+        </section>
+
+        <h2>Single Purpose</h2>
+        <p>
+          The extension analyzes visible review and comment text from supported review pages and converts it into local ASO keyword, phrase, and pain-point insights.
+        </p>
+
+        <h2>Data Processed Locally</h2>
+        <p>
+          When the user clicks <strong>Deconstruct Reviews</strong>, the extension may read visible text content from supported pages on Google Play and Product Hunt. This text is processed locally to calculate keyword frequency, phrase frequency, pain-point signals, and CSV export rows.
+        </p>
+        <p>
+          The extension may also read the active tab URL and title only to detect whether the current page is a supported review source and to include the source URL in a user-initiated CSV export.
+        </p>
+
+        <h2>Data Not Collected or Transmitted</h2>
+        <p>
+          The extension does not transmit review text, browsing data, CSV content, or analysis results to the developer or to any third party.
+        </p>
+        <ul>
+          <li>No remote server is used.</li>
+          <li>No external API is called.</li>
+          <li>No analytics SDK is included.</li>
+          <li>No advertising SDK is included.</li>
+          <li>No account or login is required.</li>
+        </ul>
+
+        <h2>Storage</h2>
+        <p>
+          Review text and analysis results are kept in browser memory while the side panel is open. The extension does not store review text in persistent extension storage.
+        </p>
+        <p>
+          If the user chooses to export a CSV file, the file is generated locally by the browser and saved only where the user chooses.
+        </p>
+
+        <h2>Permissions</h2>
+        <p>The extension uses the following Chrome permissions for its single purpose:</p>
+        <ul>
+          <li><code>sidePanel</code>: displays the local analysis interface next to the active page.</li>
+          <li><code>activeTab</code>: identifies the current active tab after user action.</li>
+          <li><code>scripting</code>: injects the packaged local content script into supported pages when needed.</li>
+          <li><code>https://play.google.com/*</code>: reads visible review text on Google Play pages.</li>
+          <li><code>https://producthunt.com/*</code> and <code>https://*.producthunt.com/*</code>: reads visible comment text on Product Hunt pages.</li>
+        </ul>
+
+        <h2>Remote Code</h2>
+        <p>
+          The extension does not use remote code. All JavaScript, HTML, CSS, and image assets used by the extension are packaged with the extension.
+        </p>
+
+        <h2>Third-Party Sharing</h2>
+        <p>
+          The extension does not sell, share, transfer, or disclose user data to third parties. It does not use user data for advertising, creditworthiness, lending, or unrelated purposes.
+        </p>
+
+        <h2>User Control</h2>
+        <p>
+          Analysis runs only when the user clicks <strong>Deconstruct Reviews</strong>. Users can close the side panel, delete exported CSV files, or remove the extension from Chrome at any time.
+        </p>
+
+        <h2>Changes to This Policy</h2>
+        <p>
+          This policy may be updated if the extension's functionality or data handling changes. The effective date above will be updated when material changes are made.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          For privacy questions, contact the publisher through the support contact listed on the Chrome Web Store listing.
+        </p>
+
+        <footer>
+          Review Analytics Shadow Decoder - Local-first review intelligence for ASO research.
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>

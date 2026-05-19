@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy Policy | Smart Ticket Linker</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --text: #111111;
+        --muted: #5f6368;
+        --line: #e5e7eb;
+        --panel: #f8fafc;
+        --link: #0b57d0;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #050505;
+          --text: #f5f5f5;
+          --muted: #a1a1aa;
+          --line: #27272a;
+          --panel: #101012;
+          --link: #8ab4f8;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: var(--bg);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.65;
+        letter-spacing: 0;
+      }
+
+      main {
+        width: min(880px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 56px 0 72px;
+      }
+
+      header {
+        padding-bottom: 28px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: clamp(34px, 6vw, 56px);
+        line-height: 1;
+        letter-spacing: -0.02em;
+      }
+
+      h2 {
+        margin: 38px 0 12px;
+        font-size: 24px;
+        line-height: 1.2;
+      }
+
+      h3 {
+        margin: 24px 0 8px;
+        font-size: 18px;
+      }
+
+      p,
+      ul {
+        margin: 0 0 16px;
+      }
+
+      ul {
+        padding-left: 22px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      a {
+        color: var(--link);
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .summary {
+        margin-top: 24px;
+        padding: 18px 20px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--panel);
+      }
+
+      .zh {
+        margin-top: 56px;
+        padding-top: 40px;
+        border-top: 1px solid var(--line);
+      }
+
+      code {
+        padding: 2px 5px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--panel);
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 0.92em;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Privacy Policy</h1>
+        <p class="meta">Smart Ticket Linker · Effective date: May 19, 2026</p>
+        <div class="summary">
+          <p><strong>Short version:</strong> Smart Ticket Linker does not collect, sell, transmit, or remotely store personal data. Ticket parsing and clipboard formatting happen locally in your browser. The extension only stores your own settings, such as enabled state, Markdown template, and clipboard mode.</p>
+        </div>
+      </header>
+
+      <section>
+        <h2>1. Overview</h2>
+        <p>Smart Ticket Linker is a Chrome extension that helps users copy the current Jira, Linear, GitHub, or web page as a clean rich link with a Markdown fallback. When you press the configured shortcut, the extension reads limited information from the current active page, formats it locally, and writes it to your clipboard.</p>
+        <p>This Privacy Policy explains what data the extension processes, how that data is used, and what is not collected.</p>
+      </section>
+
+      <section>
+        <h2>2. Data We Do Not Collect</h2>
+        <p>Smart Ticket Linker does not collect, transmit, sell, share, or remotely store:</p>
+        <ul>
+          <li>Personally identifiable information</li>
+          <li>Browsing history</li>
+          <li>Authentication credentials</li>
+          <li>Cookies</li>
+          <li>Analytics or tracking identifiers</li>
+          <li>Clipboard contents</li>
+          <li>Ticket content beyond the limited page metadata needed for the copy action</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Data Processed Locally</h2>
+        <p>After a direct user action, such as pressing the copy shortcut, the extension may process the following information from the current active tab:</p>
+        <ul>
+          <li>The current page URL</li>
+          <li>The current page title</li>
+          <li>Visible ticket metadata, such as Jira issue key, Linear issue ID, GitHub issue number, pull request number, and visible issue title</li>
+        </ul>
+        <p>This information is processed locally in your browser only to create the formatted clipboard output. It is not sent to any external server.</p>
+      </section>
+
+      <section>
+        <h2>4. Clipboard Use</h2>
+        <p>The extension uses the clipboard only for its core feature: writing a formatted ticket or page link after you invoke the copy command. Depending on your settings, the extension may write:</p>
+        <ul>
+          <li><code>text/html</code> for rich text paste targets such as Slack, Notion, Discord, and document editors</li>
+          <li><code>text/plain</code> for Markdown fallback in plain text editors and code editors</li>
+        </ul>
+        <p>Smart Ticket Linker does not read your clipboard contents.</p>
+      </section>
+
+      <section>
+        <h2>5. Stored Settings</h2>
+        <p>The extension uses <code>chrome.storage.sync</code> to store user preferences, including:</p>
+        <ul>
+          <li>Whether the extension is enabled</li>
+          <li>Your Markdown template</li>
+          <li>Your selected clipboard mode</li>
+        </ul>
+        <p>These settings are stored by Chrome so your configuration can persist across browser sessions. The extension does not store page contents, ticket descriptions, browsing history, or clipboard history.</p>
+      </section>
+
+      <section>
+        <h2>6. Permissions</h2>
+        <h3>activeTab</h3>
+        <p>Used to access the current active tab after a direct user action, such as pressing the copy shortcut.</p>
+
+        <h3>scripting</h3>
+        <p>Used to inject the local content script into the current active page when needed for parsing and clipboard writing.</p>
+
+        <h3>clipboardWrite</h3>
+        <p>Used to write the formatted rich link or Markdown link to the clipboard after user activation.</p>
+
+        <h3>storage</h3>
+        <p>Used to save user preferences such as enabled state, Markdown template, and clipboard mode.</p>
+
+        <h3>Host access</h3>
+        <p>Used to support Jira, Linear, GitHub, and general web-page fallback behavior. The extension only processes page metadata locally when you invoke the copy command.</p>
+      </section>
+
+      <section>
+        <h2>7. Third-Party Services</h2>
+        <p>Smart Ticket Linker does not use external analytics, advertising SDKs, tracking services, remote APIs, or third-party data processors.</p>
+      </section>
+
+      <section>
+        <h2>8. Data Sharing</h2>
+        <p>Smart Ticket Linker does not sell, rent, share, or transfer user data to third parties.</p>
+      </section>
+
+      <section>
+        <h2>9. Security</h2>
+        <p>The extension is designed to minimize data handling. All parsing and formatting happens locally in the browser. No remote server is used for ticket extraction or clipboard formatting.</p>
+      </section>
+
+      <section>
+        <h2>10. Changes to This Policy</h2>
+        <p>This Privacy Policy may be updated if the extension's functionality or data handling changes. The effective date at the top of this page will be updated when material changes are made.</p>
+      </section>
+
+      <section>
+        <h2>11. Contact</h2>
+        <p>For privacy questions, please contact the publisher through the Smart Ticket Linker listing on the Chrome Web Store.</p>
+      </section>
+
+      <section class="zh" lang="zh-Hans">
+        <h2>中文版本</h2>
+        <p><strong>简要说明：</strong>Smart Ticket Linker 不会收集、出售、传输或远程存储个人数据。任务解析和剪贴板格式化都只在你的浏览器本地完成。插件只保存你的设置，例如启用状态、Markdown 模板和剪贴板模式。</p>
+
+        <h3>1. 插件用途</h3>
+        <p>Smart Ticket Linker 是一个 Chrome 插件，用于将当前 Jira、Linear、GitHub 或普通网页一键复制为干净的富文本链接，并提供 Markdown 纯文本降级。当你按下配置好的快捷键时，插件会读取当前活动页面的有限信息，在本地格式化后写入剪贴板。</p>
+
+        <h3>2. 不收集的数据</h3>
+        <p>插件不会收集、传输、出售、共享或远程存储个人身份信息、浏览历史、登录凭据、Cookie、分析标识符、剪贴板内容或完整任务内容。</p>
+
+        <h3>3. 本地处理的数据</h3>
+        <p>在你主动触发复制操作后，插件可能会在本地处理当前页面 URL、页面标题，以及可见的任务元数据，例如 Jira issue key、Linear issue ID、GitHub issue number、Pull Request number 和可见标题。这些信息只用于生成剪贴板内容，不会发送到外部服务器。</p>
+
+        <h3>4. 剪贴板使用</h3>
+        <p>插件只在你触发复制命令后写入剪贴板。根据设置，插件可能写入 <code>text/html</code> 富文本链接和 <code>text/plain</code> Markdown 文本。插件不会读取你的剪贴板内容。</p>
+
+        <h3>5. 设置存储</h3>
+        <p>插件使用 <code>chrome.storage.sync</code> 保存启用状态、Markdown 模板和剪贴板模式。插件不会保存网页内容、任务描述、浏览历史或剪贴板历史。</p>
+
+        <h3>6. 权限用途</h3>
+        <p><code>activeTab</code> 用于在用户主动触发复制后访问当前活动标签页；<code>scripting</code> 用于按需注入本地内容脚本；<code>clipboardWrite</code> 用于写入格式化后的链接；<code>storage</code> 用于保存用户设置；网站访问权限用于支持 Jira、Linear、GitHub 和普通网页 fallback。</p>
+
+        <h3>7. 第三方服务和数据共享</h3>
+        <p>插件不使用外部分析、广告 SDK、追踪服务、远程 API 或第三方数据处理器，也不会向第三方出售、出租、共享或转移用户数据。</p>
+
+        <h3>8. 联系方式</h3>
+        <p>如有隐私相关问题，请通过 Chrome Web Store 上的 Smart Ticket Linker 商品页联系发布者。</p>
+      </section>
+    </main>
+  </body>
+</html>
